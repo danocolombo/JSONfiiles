@@ -1,6 +1,5 @@
 package jsonproject;
 
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
@@ -29,13 +28,13 @@ public class ReadJSONFromFile {
 		for(int i=0; i < kids.size(); i++){
 			JSONObject kid = (JSONObject)kids.get(i);
 			String kName = (String) kid.get("name");
-			int age = (int) kid.get(i);
+			long age = (long) kid.get("age");
 			System.out.println(kName + " is " + age + " years old");
 		}
+		System.out.println("\nparent info:");
+		System.out.println("id:" + uid);
+		System.out.println("name: " + fname + " " + lname);
 		
-		System.out.println(uid);
-		System.out.println(fname);
-		System.out.println(lname);
 	}
 
 }
